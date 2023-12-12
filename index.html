@@ -26,6 +26,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="new-list-item">Item 5</li>
     </ul>
    </div>
   </div>
@@ -35,5 +36,17 @@
   document.getElementById("header-title").style.border = "2px solid black"
   document.getElementById("items").style.color = "green"
   document.getElementById("items").style.fontWeight = "bold"
+  const items = document.getElementsByClassName("new-list-item");
+  if(items.length>0){
+    for(let i=0; i<items.length; i++){
+      items[i].style.color = "red";
+    }
+  }
+  var element = document.getElementsByTagName("div");
+  if(element){
+    for (var i = 0; i < element.length; i++) {
+    element[i].style.border = "2px solid black";
+  }
+  }
 </script>
 </html>
