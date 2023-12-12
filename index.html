@@ -23,8 +23,8 @@
     <h2 class="title">Items</h2>
     <ul id="items" class="list-group">
       <li class="list-group-item">Item 1</li>
-      <li class="list-group-item">Item 2</li>
-      <li class="list-group-item">Item 3</li>
+      <li class="list-group-item item2">Item 2</li>
+      <li class="list-group-item item3">Item 3</li>
       <li class="list-group-item">Item 4</li>
       <li class="new-list-item">Item 5</li>
     </ul>
@@ -48,5 +48,22 @@
     element[i].style.border = "2px solid black";
   }
   }
+
+  document.querySelector(".item2").style.backgroundColor = "green";
+  document.querySelector(".item3").style.visibility = "hidden";
+
+  const querySelectorAll = document.querySelectorAll(".list-group-item");
+  if(querySelectorAll){
+    for (var i = 0; i < element.length; i++) {
+      if(i===1){
+        element[i].style.color = "green";
+      }
+      let even = 2*i +1;
+      if(i !== even){
+        element[i].style.backgroundColor = "green";
+      }
+  }
+  }
+
 </script>
 </html>
